@@ -9,6 +9,10 @@ Notion-inspired, glassmorphism on paper texture, animated particle-S hero.
 
 Next.js 14 (App Router) · Tailwind CSS · NextAuth (Google sign-in) · deploys free on Vercel.
 
+## Deployment
+
+Live on Vercel — connected to the `main` branch of this repo.
+
 ## Run locally (VS Code)
 
 ```bash
