@@ -71,4 +71,36 @@ export default function DownloadPage() {
       </div>
 
       <div className="mt-12 space-y-6">
-        <div className="glass rounded-2
+        <div className="glass rounded-2xl p-6 sm:p-8">
+          <h2 className="font-display text-2xl font-semibold text-ink">Prefer the terminal?</h2>
+          <p className="mt-2 text-sm text-ink/60">
+            SARTHI is also a standalone CLI agent — same brain, no desktop shell. Build it from
+            source for now:
+          </p>
+          <div className="mt-4 space-y-3">
+            <CodeBlock
+              title="clone and run the CLI"
+              lines={[
+                "git clone https://github.com/jitu06583/sarthi-agent_desktop.git",
+                "cd sarthi-agent_desktop",
+                "npm install",
+                "python run_agent.py --help",
+              ]}
+            />
+          </div>
+          <p className="mt-4 text-xs text-ink/50">
+            All desktop builds above are compiled automatically from this same repo via GitHub
+            Actions — see the{" "}
+            <a
+              href="https://github.com/jitu06583/sarthi-agent_desktop/releases/latest"
+              className="font-medium text-royal hover:underline"
+            >
+              latest release
+            </a>{" "}
+            for checksums and source archives.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

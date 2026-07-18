@@ -110,4 +110,28 @@ export function Nav() {
                 className="rounded-lg px-3 py-2.5 text-sm font-semibold text-royal"
               >
                 Dashboard
-    
+              </Link>
+            ) : (
+              <>
+                <Link
+                  href="/signin"
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-2.5 text-sm font-semibold text-royal"
+                >
+                  Sign in with Google
+                </Link>
+                <Link
+                  href="/download"
+                  onClick={() => setOpen(false)}
+                  className="mt-1 rounded-xl bg-brand-gradient px-4 py-2.5 text-center text-sm font-semibold text-white shadow-card"
+                >
+                  Get SARTHI free
+                </Link>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
