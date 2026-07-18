@@ -58,6 +58,4 @@ Restart `npm run dev` — the Sign in button now works.
 | `/create` | Create your own agent (soul, memory, skills, gateway, cron) |
 | `/api-config` | LLM API / provider configuration |
 | `/pricing` | Free & open source + model cost options |
-| `/download` | Desktop app + CLI install |
-| `/signin` | Google sign-in |
-| `/dashboard` | Signed-in setup checklist |
+| `/download` | Desktop app + CLI instal
