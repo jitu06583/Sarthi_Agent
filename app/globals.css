@@ -141,3 +141,58 @@ button:focus-visible {
   outline-offset: 3px;
   border-radius: 6px;
 }
+
+/* ---------- Baked hero banner + overlaid real CTA buttons ---------- */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  max-width: 1774px;
+  margin: 0 auto;
+  aspect-ratio: 1774 / 887;
+  container-type: inline-size;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.hero-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.hero-cta {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55cqw;
+  border-radius: 0.55cqw;
+  font-family: var(--font-poppins, "Poppins"), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 1.02cqw;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hero-cta:hover { transform: translateY(-1px); }
+.hero-cta-primary {
+  background: linear-gradient(90deg, #0833f1, #0cb9a9);
+  color: #ffffff;
+  box-shadow: 0 0.4cqw 1.2cqw rgba(8, 51, 241, 0.28);
+}
+.hero-cta-primary:hover { filter: brightness(1.06); }
+.hero-cta-arrow { font-size: 1.25cqw; line-height: 1; }
+.hero-cta-secondary {
+  background: #ffffff;
+  border: 1px solid #e4e9f0;
+  color: #13294d;
+  box-shadow: 0 0.1cqw 0.4cqw rgba(20, 40, 80, 0.08);
+}
+.hero-cta-secondary:hover { box-shadow: 0 0.4cqw 1cqw rgba(20, 40, 80, 0.14); }
+.hero-cta-play { width: 1.5cqw; height: 1.5cqw; flex: none; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta { transition: none !important; }
+  .hero-cta:hover { transform: none !important; }
+}

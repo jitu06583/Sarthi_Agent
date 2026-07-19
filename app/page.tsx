@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BrandHero } from "@/components/BrandLogo";
+import { HeroBanner } from "@/components/HeroBanner";
 import { Terminal } from "@/components/Terminal";
 import { Reveal } from "@/components/Reveal";
 
@@ -39,49 +39,11 @@ const steps = [
 export default function Home() {
   return (
     <>
-      {/* ---------------- Hero ---------------- */}
-      <section className="mx-auto grid max-w-6xl items-center gap-10 px-6 pb-20 pt-14 md:grid-cols-2 md:pt-20">
-        <div>
-          <p className="inline-block rounded-full border border-peacock/30 bg-peacock/10 px-3 py-1 text-xs font-semibold tracking-wide text-peacock">
-            Free &amp; open source · MIT
-          </p>
-          <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl">
-            The AI agent that
-            <br />
-            <span className="text-brand-gradient">knows you</span> — and
-            <br />
-            grows with you.
-          </h1>
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/65">
-            SARTHI learns skills from experience, remembers you across sessions, and works
-            everywhere you do — terminal, desktop, and your messaging apps.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Link
-              href="/download"
-              className="rounded-2xl bg-brand-gradient px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition hover:opacity-90"
-            >
-              Download for desktop
-            </Link>
-            <Link
-              href="/create"
-              className="glass rounded-2xl px-6 py-3.5 text-sm font-semibold text-ink transition hover:shadow-lift"
-            >
-              Create your agent →
-            </Link>
-          </div>
-          <p className="mt-5 font-mono text-xs text-ink/45">
-            $ curl -fsSL https://sarthi-agent.vercel.app/install.sh | bash
-          </p>
-        </div>
-
-        <div className="sarthi-mark-wrap mx-auto w-full max-w-md">
-          <BrandHero />
-        </div>
-      </section>
+      {/* ---------------- Hero (baked banner + real CTAs) ---------------- */}
+      <HeroBanner />
 
       {/* ---------------- Terminal demo ---------------- */}
-      <section className="mx-auto max-w-6xl px-6">
+      <section className="mx-auto max-w-6xl px-6 pt-16">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
